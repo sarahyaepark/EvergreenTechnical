@@ -1,3 +1,22 @@
+## App Walkthrough
+
+* Display a list/table of vendors managed by the company (Vendor name, description, external link, category, status, risk)
+<img width="600px" height="277px" src="./demo/evergreen_demo_table.gif">
+
+* Allow admins to edit certain fields on the page
+<img width="600px" height="277px" src="./demo/evergreen_demo_admin.gif">
+
+* Allow admins to filter by category
+<img width="600px" height="277px" src="./demo/evergreen_demo_filter.gif">
+
+* Allow admins to sort by criteria
+<img width="600px" height="277px" src="./demo/evergreen_demo_sort.gif">
+
+* Allow admins to search by vendor name
+<img width="600px" height="277px" src="./demo/evergreen_demo_search.gif">
+
+**desktop**
+
 # Backend setup
 ## Create python3 virtualenv
 ```
