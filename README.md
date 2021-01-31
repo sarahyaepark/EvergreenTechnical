@@ -15,7 +15,9 @@
 * Allow admins to search by vendor name
 <img width="600px" height="277px" src="./demo/evergreen_demo_search.gif">
 
-**desktop**
+**Possible optimizations**
+* search function is brute force-- Could make a hashmap to map vendor name to vendor info for fast lookup instead of looping
+* clean up vendor list component
 
 # Backend setup
 ## Create python3 virtualenv
