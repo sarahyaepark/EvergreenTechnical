@@ -18,6 +18,7 @@
 **Possible optimizations**
 * search function is brute force-- Could make a hashmap to map vendor name to vendor info for fast lookup instead of looping
 * clean up vendor list component
+* better check for isAdmin rather than just boolean value
 
 # Backend setup
 ## Create python3 virtualenv
