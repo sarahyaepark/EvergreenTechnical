@@ -4,7 +4,7 @@
 <img width="600px" height="277px" src="./demo/evergreen_demo_table.gif">
 
 * Allow admins to edit certain fields on the page
-<img width="600px" height="277px" src="./demo/evergreen_demo_admin.gif">
+<img width="600px" height="277px" src="./demo/evergreen_demo_edit.gif">
 
 * Allow admins to filter by category
 <img width="600px" height="277px" src="./demo/evergreen_demo_filter.gif">
