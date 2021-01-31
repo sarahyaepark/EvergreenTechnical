@@ -51,7 +51,9 @@ function App() {
   const handleSortChange = (e) => {
     setSort(e.target.value);
   };
-
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
   return user ? (
     <div className={css(styles.container)}>
       <img
@@ -60,6 +62,7 @@ function App() {
         alt="logo"
       />
       <div className={css(styles.filterContainer)}>
+        <SearchBox handleSearch={handleSearch} />
         <div className={css(styles.filter)}>
           <h4>Filter By:</h4>
           <DropdownFilter handleFilterChange={handleFilterChange} value1="Software" value2="Consulting, staffing, and professional services" value3="Other" />
@@ -68,7 +71,7 @@ function App() {
         </div>
       </div>
       <br />
-      <VendorList sortBy={sortBy} filterBy={filterBy} isAdmin={user.admin} />
+      <VendorList search={search} sortBy={sortBy} filterBy={filterBy} isAdmin={user.admin} />
     </div>
   ) : (
     <img

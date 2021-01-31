@@ -1,4 +1,3 @@
-/* eslint-disable complexity */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useQuery, useMutation } from '@apollo/client';
@@ -31,7 +30,7 @@ const useStyles = makeStyles({
 
 export const VendorList = (props) => {
   const {
-    isAdmin, filterBy, sortBy,
+    isAdmin, filterBy, sortBy, search,
   } = props;
 
   const { data, error, loading } = useQuery(GET_VENDORS_QUERY);
@@ -79,6 +78,19 @@ export const VendorList = (props) => {
       setVendors(sorted);
     }
   }, [sortBy]);
+
+  useEffect(() => {
+    if (data) {
+      const currentLength = search.length;
+      const currentMatches = [];
+
+      data.vendors.map((currVendor) => {
+        const sub = currVendor.name.substring(0, currentLength).toLowerCase();
+        if (sub === (search).toLowerCase()) currentMatches.push(currVendor);
+      });
+      setVendors(currentMatches);
+    }
+  }, [search]);
 
   return vendors ? (
     <TableContainer component={Paper} className={classes.container}>
@@ -165,4 +177,5 @@ VendorList.propTypes = {
   isAdmin: PropTypes.bool.isRequired,
   filterBy: PropTypes.string.isRequired,
   sortBy: PropTypes.string.isRequired,
+  search: PropTypes.string.isRequired,
 };
